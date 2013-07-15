@@ -11,6 +11,7 @@ set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 syntax on
 filetype plugin indent on
 set nu
+set hls scs
 set go=
 set gfn=Consolas:h10:cANSI
 set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
