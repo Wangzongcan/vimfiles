@@ -51,8 +51,18 @@ set et ts=4 sw=4 sts=4
 " ±‡º≠
 set hid
 set bs=2
-set nobk
 set aw ar
+
+" ±∏∑›
+set udir=~/.vim/tmp/undo//     " undo files
+set udf
+set ul=3000
+set ur=10000
+set bdir=~/.vim/tmp/backup// " backups
+set dir=~/.vim/tmp/swap//   " swap files
+set bk
+set noswf
+
 
 " ”≥…‰
 let mapleader=','
