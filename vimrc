@@ -19,4 +19,4 @@ set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
 set list lcseol:<
 
 " ×´Ì¬À¸
-set ls
+set ls=2
