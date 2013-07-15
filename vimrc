@@ -14,6 +14,15 @@ let NERDTreeQuitOnOpen=1
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = ''
 
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+
+autocmd FileType ruby,eruby setlocal ts=2 sw=2 sts=2
+
+Bundle 'tomasr/molokai'
+colo molokai
+
+
 
 " ±àÂë
 set enc=utf-8
