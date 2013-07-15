@@ -16,7 +16,18 @@ set wmnu
 set hls scs
 set gfn=Consolas:h10:cANSI
 set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
-set list lcseol:<
+set list lcs=eol:<
 
 " ×´Ì¬À¸
 set ls=2
+
+" ¸ñÊ½»¯
+set ai si
+set nowrap
+set et ts=4 sw=4 sts=4
+
+" ±à¼­
+set hid
+set bs=2
+set nobk
+set aw ar
