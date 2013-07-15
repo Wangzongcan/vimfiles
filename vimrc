@@ -2,6 +2,19 @@
 set nocp
 set novb t_vb=
 
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'scrooloose/nerdtree'
+nmap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+let NERDTreeQuitOnOpen=1
+
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_working_path_mode = ''
+
+
 " ±‡¬Î
 set enc=utf-8
 set fenc=utf-8
@@ -31,3 +44,9 @@ set hid
 set bs=2
 set nobk
 set aw ar
+
+" ”≥…‰
+let mapleader=','
+nnoremap ; :
+nnoremap j gj
+nnoremap k gk
