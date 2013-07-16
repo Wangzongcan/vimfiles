@@ -1,4 +1,4 @@
-" ÅäÖÃ
+" é…ç½®
 set nocp
 set novb t_vb=
 
@@ -24,12 +24,12 @@ colo molokai
 
 
 
-" ±àÂë
+" ç¼–ç 
 set enc=utf-8
 set fenc=utf-8
 set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-" ÏÔÊ¾
+" æ˜¾ç¤º
 syntax on
 filetype plugin indent on
 set nu
@@ -38,22 +38,23 @@ set wmnu
 set hls scs
 set gfn=Consolas:h10:cANSI
 set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
-set list lcs=eol:<
+set list lcs=eol:Â¬,tab:â–¸\ ,trail:.,extends:Â»,precedes:Â«
 
-" ×´Ì¬À¸
+" çŠ¶æ€æ 
 set ls=2
+set statusline=%F%m%r,%Y,%{&fileformat}\ \ \ ASCII=\%b,HEX=\%B\ \ \ %l,%c%V\ %p%%\ \ \ [\ %L\ lines\ in\ all\ ]
 
-" ¸ñÊ½»¯
+" æ ¼å¼åŒ–
 set ai si
 set nowrap
 set et ts=4 sw=4 sts=4
 
-" ±à¼­
+" ç¼–è¾‘
 set hid
 set bs=2
 set aw ar
 
-" ±¸·İ
+" å¤‡ä»½
 set udir=~/.vim/tmp/undo//     " undo files
 set udf
 set ul=3000
@@ -64,8 +65,14 @@ set bk
 set noswf
 
 
-" Ó³Éä
+" æ˜ å°„
 let mapleader=','
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk
+
+noremap <C-h>  <C-w>h
+noremap <C-j>  <C-w>j
+noremap <C-k>  <C-w>k
+noremap <C-l>  <C-w>l
+
