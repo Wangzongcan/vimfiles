@@ -35,7 +35,7 @@ filetype plugin indent on
 set nu
 set go=
 set wmnu
-set hls scs
+set is hls scs
 set gfn=Consolas:h10:cANSI
 set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
 set list lcs=eol:¬,tab:▸\ ,trail:.,extends:»,precedes:«
