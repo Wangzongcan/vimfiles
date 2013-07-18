@@ -22,22 +22,19 @@ autocmd FileType ruby,eruby setlocal ts=2 sw=2 sts=2
 Bundle 'tomasr/molokai'
 colo molokai
 
-
-
 " 编码
 set enc=utf-8
-set fenc=utf-8
-set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 " 显示
 syntax on
 filetype plugin indent on
-set nu
+set rnu
 set go=
 set wmnu
 set is hls scs
-set gfn=Consolas:h10:cANSI
-set list lcs=eol:¬,tab:▸\ ,trail:.,extends:»,precedes:«
+set gfn=DejaVu\ Sans\ Mono:h9:cANSI
+set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
+set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
 
 " 状态栏
 set ls=2
@@ -52,6 +49,10 @@ set et ts=4 sw=4 sts=4
 set hid
 set bs=2
 set aw ar
+
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 
 " 备份
 set udir=~/.vim/tmp/undo//     " undo files
@@ -85,4 +86,13 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " autocmd
-autocmd! BufWritePost vimrc source $VIM\vimfiles\vimrc
+command! W :w
+" 修改配置文件后，保存时source配置文件
+au! BufWritePost vimrc source $VIM\vimfiles\vimrc
+" 失去焦点用绝对行号, 获取焦点用相对
+au FocusLost * :set nu
+au FocusGained * :set rnu
+" 插入模式下用绝对行号, 普通模式下用相对
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+
