@@ -37,7 +37,6 @@ set go=
 set wmnu
 set is hls scs
 set gfn=Consolas:h10:cANSI
-set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
 set list lcs=eol:¬,tab:▸\ ,trail:.,extends:»,precedes:«
 
 " 状态栏
@@ -64,9 +63,13 @@ set dir=~/.vim/tmp/swap//   " swap files
 set bk
 set noswf
 
-
 " 映射
 let mapleader=','
+"Fast reloading of the .vimrc
+map <silent> <leader>ss :source $VIM\_vimrc<cr>
+"Fast editing of .vimrc
+map <silent> <leader>ee :e $VIM\vimfiles\vimrc<cr>
+
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk
@@ -81,3 +84,5 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+" autocmd
+autocmd! BufWritePost vimrc source $VIM\vimfiles\vimrc
