@@ -1,10 +1,10 @@
 " 配置文件 {
-" vim: set tw=78 foldmarker={,} foldlevel=0 foldmethod=marker:
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker:
 " }
 
 " 基础配置 {
-set nocp
-set novb t_vb=
+    set nocp
+    set novb t_vb=
 " }
 
 " Vundle {
@@ -29,85 +29,85 @@ set novb t_vb=
 " }
 
 " 编码 {
-set enc=utf-8
+    set enc=utf-8
 " }
 
 " 显示 {
-syntax on
-filetype plugin indent on
-set rnu
-set go=
-set wmnu
-set is hls scs
-set gfn=DejaVu\ Sans\ Mono:h9:cANSI
-set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
-set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
+    syntax on
+    filetype plugin indent on
+    set rnu
+    set go=
+    set wmnu
+    set bg=dark
+    set is hls scs
+    set gfn=DejaVu\ Sans\ Mono:h9:cANSI
+    set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
+    set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
 " }
 
 " 状态栏 {
-set ls=2
-set statusline=%F%m%r,%Y,%{&fileformat}\ \ \ ASCII=\%b,HEX=\%B\ \ \ %l,%c%V\ %p%%\ \ \ [\ %L\ lines\ in\ all\ ]
+    set ls=2
 " }
 
 " 格式化 {
-set ai si
-set nowrap
-set et ts=4 sw=4 sts=4
+    set ai si
+    set nowrap
+    set et ts=4 sw=4 sts=4
 " }
 
 " 编辑 {
-set hid
-set bs=2
-set aw ar
+    set hid
+    set bs=2
+    set aw ar
 " }
 
 " Leader {
-set notimeout
-set ttimeout
-set ttimeoutlen=10
+    set notimeout
+    set ttimeout
+    set ttimeoutlen=10
 " }
 
 " 备份 {
-set udir=~/.vim/tmp/undo//     " undo files
-set udf
-set ul=3000
-set ur=10000
-set bdir=~/.vim/tmp/backup// " backups
-set dir=~/.vim/tmp/swap//   " swap files
-set bk
-set noswf
+    set udir=~/.vim/tmp/undo//     " undo files
+    set udf
+    set ul=3000
+    set ur=10000
+    set bdir=~/.vim/tmp/backup// " backups
+    set dir=~/.vim/tmp/swap//   " swap files
+    set bk
+    set noswf
 " }
 
 " 映射 {
-let mapleader=','
-"Fast reloading of the .vimrc
-map <silent> <leader>ss :source $VIM\_vimrc<cr>
-"Fast editing of .vimrc
-map <silent> <leader>ee :e $VIM\vimfiles\vimrc<cr>
+    let mapleader=','
+    "Fast reloading of the .vimrc
+    map <silent> <leader>ss :source $VIM\_vimrc<cr>
+    "Fast editing of .vimrc
+    map <silent> <leader>ee :e $VIM\vimfiles\vimrc<cr>
 
-nnoremap ; :
-nnoremap j gj
-nnoremap k gk
+    nnoremap ; :
+    nnoremap j gj
+    nnoremap k gk
 
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
+    inoremap <C-p> <Up>
+    inoremap <C-n> <Down>
+    inoremap <C-b> <Left>
+    inoremap <C-f> <Right>
 
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
+    noremap <C-h> <C-w>h
+    noremap <C-j> <C-w>j
+    noremap <C-k> <C-w>k
+    noremap <C-l> <C-w>l
 " }
 
 " autocmd {
-command! W :w
-" 修改配置文件后，保存时source配置文件
-au! BufWritePost vimrc source $VIM\vimfiles\vimrc
-" 失去焦点用绝对行号, 获取焦点用相对
-au FocusLost * :set nu
-au FocusGained * :set rnu
-" 插入模式下用绝对行号, 普通模式下用相对
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
+    command! W :w
+    " 修改配置文件后，保存时source配置文件
+    au! BufWritePost vimrc source $VIM\vimfiles\vimrc
+    " 失去焦点用绝对行号, 获取焦点用相对
+    au FocusLost * :set nu
+    au FocusGained * :set rnu
+    " 插入模式下用绝对行号, 普通模式下用相对
+    au InsertEnter * :set nu
+    au InsertLeave * :set rnu
 " }
