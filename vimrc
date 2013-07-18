@@ -20,9 +20,9 @@
     let g:ctrlp_working_path_mode = ''
 
     Bundle 'vim-ruby/vim-ruby'
-    Bundle 'tpope/vim-rails'
+    au FileType ruby,eruby setlocal ts=2 sw=2 sts=2
 
-    autocmd FileType ruby,eruby setlocal ts=2 sw=2 sts=2
+    Bundle 'tpope/vim-rails'
 
     Bundle 'tomasr/molokai'
     colo molokai
@@ -43,6 +43,7 @@
     set gfn=DejaVu\ Sans\ Mono:h9:cANSI
     set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
     set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
+    set showbreak=↪
 " }
 
 " 状态栏 {
@@ -51,7 +52,8 @@
 
 " 格式化 {
     set ai si
-    set nowrap
+    set wrap
+    set tw=80
     set et ts=4 sw=4 sts=4
 " }
 
@@ -93,6 +95,8 @@
     inoremap <C-n> <Down>
     inoremap <C-b> <Left>
     inoremap <C-f> <Right>
+
+    inoremap jj <Esc>
 
     noremap <C-h> <C-w>h
     noremap <C-j> <C-w>j
