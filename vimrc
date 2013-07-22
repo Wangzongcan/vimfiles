@@ -108,10 +108,4 @@
     command! W :w
     " 修改配置文件后，保存时source配置文件
     au! BufWritePost vimrc source $VIM\vimfiles\vimrc
-    " 失去焦点用绝对行号, 获取焦点用相对
-    au FocusLost * :set nu
-    au FocusGained * :set rnu
-    " 插入模式下用绝对行号, 普通模式下用相对
-    au InsertEnter * :set nu
-    au InsertLeave * :set rnu
 " }
