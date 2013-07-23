@@ -40,17 +40,12 @@
     set wmnu
     set bg=dark
     set is hls scs
-<<<<<<< HEAD
-    set gfn=DejaVu\ Sans\ Mono:h9:cANSI
-    set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
-=======
-    if has("gui_win32" || "gui_win64")
+    if has("gui_win32")
         set gfn=DejaVu\ Sans\ Mono:h9:cANSI
         set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
     elseif has("gui_gtk2")
         set gfn=DejaVu\ Sans\ Mono\ 9
     endif
->>>>>>> 9bcd47db919cfd0909f0e325b700e1df43a0e89e
     set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
     set showbreak=↪
 " }
@@ -91,17 +86,10 @@
 
 " 映射 {
     let mapleader=','
-    if has('win32') || has('win64')
-        "Fast reloading of the .vimrc
-        map <silent> <leader>ss :source $VIM\_vimrc<cr>
-        "Fast editing of .vimrc
-        map <silent> <leader>ee :e $VIM\vimfiles\vimrc<cr>
-    else
-        "Fast reloading of the .vimrc
-        map <silent> <leader>ss :source ~/.vim/vimrc<cr>
-        "Fast editing of .vimrc
-        map <silent> <leader>ee :e ~/.vim/vimrc<cr>
-    endif
+    "Fast reloading of the .vimrc
+    map <silent> <leader>ss :source ~/.vim/vimrc<cr>
+    "Fast editing of .vimrc
+    map <silent> <leader>ee :e ~/.vim/vimrc<cr>
 
     nnoremap ; :
     nnoremap j gj
@@ -123,9 +111,5 @@
 " autocmd {
     command! W :w
     " 修改配置文件后，保存时source配置文件
-    if has('win32') || has('win64')
-      au! BufWritePost vimrc source $VIM\vimfiles\vimrc
-    else
-      au! BufWritePost vimrc source ~/.vim/vimrc
-    endif
+    au! BufWritePost vimrc source ~/.vim/vimrc
 " }
