@@ -41,7 +41,7 @@
     set bg=dark
     set is hls scs
     set gfn=DejaVu\ Sans\ Mono:h9:cANSI
-    set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
+    set gfw=Microsoft\ YaHei\ Mono:h10:cGB2312
     set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
     set showbreak=↪
 " }
