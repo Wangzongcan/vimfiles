@@ -30,6 +30,12 @@
 
 " 编码 {
     set enc=utf-8
+    set fenc=utf-8
+    set fencs=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+    set langmenu=zh_CN.UTF-8
+    language message zh_CN.UTF-8
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
 " }
 
 " 显示 {
