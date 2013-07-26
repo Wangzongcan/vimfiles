@@ -113,6 +113,3 @@
     " 修改配置文件后，保存时source配置文件
     au! BufWritePost vimrc source ~/.vim/vimrc
 " }
-"
-" test
-" ttt
