@@ -41,6 +41,7 @@
 " 显示 {
     syntax on
     filetype plugin indent on
+    set nu
     set rnu
     set go=
     set wmnu
