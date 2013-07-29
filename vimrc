@@ -12,6 +12,8 @@
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
 
+    Bundle 'gmarik/vundle'
+
     Bundle 'scrooloose/nerdtree'
     nmap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
     let NERDTreeQuitOnOpen=1
@@ -23,6 +25,8 @@
     au FileType ruby,eruby setlocal ts=2 sw=2 sts=2
 
     Bundle 'tpope/vim-rails'
+
+    Bundle 'tpope/vim-fugitive'
 
     Bundle 'tomasr/molokai'
     colo molokai
