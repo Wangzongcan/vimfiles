@@ -121,6 +121,8 @@
     nnoremap <silent> <C-o> <C-o>zz
     nnoremap <silent> <C-i> <C-i>zz
 
+    vnoremap < <gv
+    vnoremap > >gv
 
     inoremap <C-p> <Up>
     inoremap <C-n> <Down>
