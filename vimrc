@@ -63,7 +63,7 @@
     elseif has("gui_gtk2")
         set gfn=DejaVu\ Sans\ Mono\ 9
     endif
-    set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:»,precedes:«
+    set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:❯,precedes:❮
     set showbreak=↪
 " }
 
@@ -111,6 +111,16 @@
     nnoremap ; :
     nnoremap j gj
     nnoremap k gk
+
+    nnoremap <silent> n nzz
+    nnoremap <silent> N Nzz
+    nnoremap <silent> * *zz
+    nnoremap <silent> # #zz
+    nnoremap <silent> g* g*zz
+    nnoremap <silent> g# g#zz
+    nnoremap <silent> <C-o> <C-o>zz
+    nnoremap <silent> <C-i> <C-i>zz
+
 
     inoremap <C-p> <Up>
     inoremap <C-n> <Down>
