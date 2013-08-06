@@ -35,7 +35,8 @@
     Bundle 'tpope/vim-fugitive'
 
     Bundle 'tomasr/molokai'
-    colo molokai
+    Bundle 'chriskempson/vim-tomorrow-theme'
+    colo Tomorrow-Night-Eighties
 " }
 
 " 编码 {
