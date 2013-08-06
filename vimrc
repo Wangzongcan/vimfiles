@@ -130,7 +130,8 @@
     inoremap <C-b> <Left>
     inoremap <C-f> <Right>
 
-    inoremap jj <Esc>
+    inoremap jk <Esc>
+    inoremap kj <Esc>
 
     noremap <C-h> <C-w>h
     noremap <C-j> <C-w>j
