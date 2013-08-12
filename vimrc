@@ -21,33 +21,6 @@
     Bundle 'kien/ctrlp.vim'
     let g:ctrlp_working_path_mode = ''
 
-    Bundle 'Shougo/neocomplcache.vim'
-    "{
-        " Disable AutoComplPop.
-        let g:acp_enableAtStartup = 0
-        " Use neocomplcache.
-        let g:neocomplcache_enable_at_startup = 1
-        " Use smartcase.
-        let g:neocomplcache_enable_smart_case = 1
-        " Set minimum syntax keyword length.
-        let g:neocomplcache_min_syntax_length = 3
-        let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-        " <TAB>: completion.
-        inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-        " <C-h>, <BS>: close popup and delete backword char.
-        inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-        inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-        inoremap <expr><C-y>  neocomplcache#close_popup()
-        inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-        " Enable omni completion.
-        autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-        autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    "}
-
     Bundle 'vim-ruby/vim-ruby'
     au FileType ruby,eruby setlocal ts=2 sw=2 sts=2
 
