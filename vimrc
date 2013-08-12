@@ -31,7 +31,6 @@
     let g:airline_right_sep=''
     let g:airline_theme='laederon'
 
-
     Bundle 'tpope/vim-fugitive'
 
     Bundle 'tomasr/molokai'
@@ -66,6 +65,9 @@
     endif
     set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:❯,precedes:❮
     set showbreak=↪
+    " 自定义高亮
+    hi WhitespaceEOL ctermbg=red guibg=red
+    mat WhitespaceEOL /\s\+$/
 " }
 
 " 状态栏 {
