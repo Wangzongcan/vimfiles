@@ -35,7 +35,7 @@
 
     Bundle 'tomasr/molokai'
     Bundle 'chriskempson/vim-tomorrow-theme'
-    colo Tomorrow-Night-Eighties
+    colo Tomorrow-Night-Bright
 " }
 
 " 编码 {
@@ -127,8 +127,6 @@
     vnoremap < <gv
     vnoremap > >gv
 
-    inoremap <C-p> <Up>
-    inoremap <C-n> <Down>
     inoremap <C-b> <Left>
     inoremap <C-f> <Right>
 
