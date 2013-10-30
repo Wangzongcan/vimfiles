@@ -22,7 +22,7 @@
     let g:ctrlp_working_path_mode = ''
 
     Bundle 'vim-ruby/vim-ruby'
-    au FileType ruby,eruby setlocal ts=2 sw=2 sts=2
+    au FileType ruby,eruby setlocal ts=4 sw=4 sts=4
 
     Bundle 'tpope/vim-rails'
 
@@ -58,13 +58,13 @@
     set bg=dark
     set is hls scs
     if has("gui_win32")
-        set gfn=DejaVu\ Sans\ Mono:h9:cANSI
-        set gfw=Microsoft\ YaHei\ Mono:h9:cGB2312
+        set gfn=Inconsolata:h9:cANSI
+        set gfw=NSimsun:h9:cGB2312
     elseif has("gui_gtk2")
         set gfn=DejaVu\ Sans\ Mono\ 9
     endif
-    set list lcs=eol:¬,tab:▸\ ,trail:␣,extends:❯,precedes:❮
-    set showbreak=↪
+    set list lcs=eol:¬,tab:»\ ,trail:.
+    set showbreak=?
     " 自定义高亮
     hi WhitespaceEOL ctermbg=red guibg=red
     mat WhitespaceEOL /\s\+$/
