@@ -31,11 +31,13 @@
     let g:airline_right_sep=''
     let g:airline_theme='laederon'
 
+    Bundle 'junegunn/goyo.vim'
+
     Bundle 'tpope/vim-fugitive'
 
     Bundle 'tomasr/molokai'
     Bundle 'chriskempson/vim-tomorrow-theme'
-    colo Tomorrow-Night-Bright
+    colo molokai
 " }
 
 " 编码 {
@@ -52,7 +54,6 @@
     syntax on
     filetype plugin indent on
     set nu
-    set rnu
     set go=
     set wmnu
     set bg=dark
@@ -61,10 +62,10 @@
         set gfn=Inconsolata:h9:cANSI
         set gfw=NSimsun:h9:cGB2312
     elseif has("gui_gtk2")
-        set gfn=DejaVu\ Sans\ Mono\ 9
+        set gfn=Dejavu\ Sans\ Mono\ 9
+        set gfw=WenQuanyi\ Micro\ Hei\ Mono\ 11
     endif
-    set list lcs=eol:¬,tab:»\ ,trail:.
-    set showbreak=?
+    set list lcs=tab:»\ ,trail:.
     " 自定义高亮
     hi WhitespaceEOL ctermbg=red guibg=red
     mat WhitespaceEOL /\s\+$/
@@ -146,6 +147,25 @@
 
     noremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>
     noremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>
+" }
+
+" 插件设置 {
+    " Goyo
+    let g:goyo_width = 150
+    function! s:goyo_before()
+        set nonu
+        set noshowcmd
+        set noshowmode
+    endfunction
+
+    function! s:goyo_after()
+        set nu
+        set showcmd
+        set showmode
+    endfunction
+
+    let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
+    nmap <leader>g :Goyo<cr>
 " }
 
 " autocmd {
