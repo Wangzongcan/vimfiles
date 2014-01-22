@@ -62,7 +62,7 @@
         set gfn=Inconsolata:h9:cANSI
         set gfw=NSimsun:h9:cGB2312
     elseif has("gui_gtk2")
-        set gfn=Dejavu\ Sans\ Mono\ 9
+        set gfn=Ubuntu\ Mono\ 12
         set gfw=WenQuanyi\ Micro\ Hei\ Mono\ 11
     endif
     set list lcs=tab:»\ ,trail:.
