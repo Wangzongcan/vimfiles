@@ -139,12 +139,6 @@
     noremap <C-k> <C-w>k
     noremap <C-l> <C-w>l
 
-    nnoremap / /\v
-    vnoremap / /\v
-    nnoremap ? ?\v
-    vnoremap ? ?\v
-    cnoremap s/ s/\v
-
     noremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>
     noremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>
 " }
