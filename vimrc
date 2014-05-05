@@ -9,35 +9,37 @@
 
 " Vundle {
     filetype off
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
-    Bundle 'gmarik/vundle'
+    Plugin 'gmarik/Vundle.vim'
 
-    Bundle 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdtree'
     nmap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
     let NERDTreeQuitOnOpen=1
 
-    Bundle 'kien/ctrlp.vim'
+    Plugin 'kien/ctrlp.vim'
     let g:ctrlp_working_path_mode = ''
 
-    Bundle 'vim-ruby/vim-ruby'
+    Plugin 'vim-ruby/vim-ruby'
     au FileType ruby,eruby setlocal ts=4 sw=4 sts=4
 
-    Bundle 'tpope/vim-rails'
+    Plugin 'tpope/vim-rails'
 
-    Bundle 'bling/vim-airline'
+    Plugin 'bling/vim-airline'
     let g:airline_left_sep=''
     let g:airline_right_sep=''
     let g:airline_theme='laederon'
 
-    Bundle 'junegunn/goyo.vim'
+    Plugin 'junegunn/goyo.vim'
 
-    Bundle 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-fugitive'
 
-    Bundle 'tomasr/molokai'
-    Bundle 'chriskempson/vim-tomorrow-theme'
-    colo molokai
+    Plugin 'tomasr/molokai'
+    Plugin 'chriskempson/vim-tomorrow-theme'
+
+    call vundle#end()
+    filetype plugin indent on
 " }
 
 " 编码 {
@@ -52,12 +54,12 @@
 
 " 显示 {
     syntax on
-    filetype plugin indent on
     set nu
     set go=
     set wmnu
     set bg=dark
     set is hls scs
+    colo molokai
     if has("gui_win32")
         set gfn=Inconsolata:h9:cANSI
         set gfw=NSimsun:h9:cGB2312
