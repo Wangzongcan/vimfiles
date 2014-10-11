@@ -31,12 +31,9 @@
     let g:airline_right_sep=''
     let g:airline_theme='laederon'
 
-    Plugin 'junegunn/goyo.vim'
-
     Plugin 'tpope/vim-fugitive'
 
     Plugin 'tomasr/molokai'
-    Plugin 'chriskempson/vim-tomorrow-theme'
 
     call vundle#end()
     filetype plugin indent on
