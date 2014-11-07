@@ -18,9 +18,6 @@
     nmap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
     let NERDTreeQuitOnOpen=1
 
-    Plugin 'kien/ctrlp.vim'
-    let g:ctrlp_working_path_mode = ''
-
     Plugin 'vim-ruby/vim-ruby'
     au FileType ruby,eruby setlocal ts=4 sw=4 sts=4
 
@@ -57,13 +54,8 @@
     set bg=dark
     set is hls scs
     colo molokai
-    if has("gui_win32")
-        set gfn=Inconsolata:h9:cANSI
-        set gfw=NSimsun:h9:cGB2312
-    elseif has("gui_gtk2")
-        set gfn=Ubuntu\ Mono\ 12
-        set gfw=WenQuanyi\ Micro\ Hei\ Mono\ 11
-    endif
+    set gfn=Menlo:h12
+    set gfw=Hiragino\ Sans\ GB\ W3:h12
     set list lcs=tab:»\ ,trail:.
     " 自定义高亮
     hi WhitespaceEOL ctermbg=red guibg=red
@@ -143,22 +135,6 @@
 " }
 
 " 插件设置 {
-    " Goyo
-    let g:goyo_width = 150
-    function! s:goyo_before()
-        set nonu
-        set noshowcmd
-        set noshowmode
-    endfunction
-
-    function! s:goyo_after()
-        set nu
-        set showcmd
-        set showmode
-    endfunction
-
-    let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
-    nmap <leader>g :Goyo<cr>
 " }
 
 " autocmd {
