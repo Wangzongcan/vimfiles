@@ -19,7 +19,7 @@
     let NERDTreeQuitOnOpen=1
 
     Plugin 'vim-ruby/vim-ruby'
-    au FileType ruby,eruby setlocal ts=4 sw=4 sts=4
+    au FileType ruby,eruby setlocal ts=2 sw=2 sts=2
 
     Plugin 'tpope/vim-rails'
 
