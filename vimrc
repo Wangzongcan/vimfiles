@@ -7,33 +7,18 @@
     set noeb novb t_vb=
 " }
 
-" Vundle {
-    filetype off
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
+" Plug {
+    call plug#begin('~/.vim/plugged')
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
-    Plugin 'gmarik/Vundle.vim'
-
-    Plugin 'scrooloose/nerdtree'
-    nmap <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-    let NERDTreeQuitOnOpen=1
-
-    Plugin 'vim-ruby/vim-ruby'
-    au FileType ruby,eruby setlocal ts=2 sw=2 sts=2
-
-    Plugin 'tpope/vim-rails'
-
-    Plugin 'bling/vim-airline'
+    Plug 'vim-ruby/vim-ruby'
+    Plug 'tpope/vim-rails'
+    Plug 'tpope/vim-bundler'
+    Plug 'bling/vim-airline'
     let g:airline_left_sep=''
     let g:airline_right_sep=''
     let g:airline_theme='laederon'
-
-    Plugin 'tpope/vim-fugitive'
-
-    Plugin 'tomasr/molokai'
-
-    call vundle#end()
-    filetype plugin indent on
+    call plug#end()
 " }
 
 " 编码 {
@@ -53,8 +38,8 @@
     set wmnu
     set bg=dark
     set is hls scs
-    colo molokai
-    set gfn=Menlo:h12
+    " colo molokai
+    set gfn=M+\ 1m:h12
     set gfw=Hiragino\ Sans\ GB\ W3:h12
     set list lcs=tab:»\ ,trail:.
     " 自定义高亮
@@ -77,6 +62,7 @@
     set hid
     set bs=2
     set aw ar
+    set clipboard+=unnamed
 " }
 
 " Leader {
