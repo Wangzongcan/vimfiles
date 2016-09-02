@@ -15,9 +15,6 @@
     Plug 'tpope/vim-rails'
     Plug 'tpope/vim-bundler'
     Plug 'bling/vim-airline'
-    let g:airline_left_sep=''
-    let g:airline_right_sep=''
-    let g:airline_theme='dark'
     call plug#end()
 " }
 
@@ -121,6 +118,15 @@
 " }
 
 " 插件设置 {
+    " RUBY
+    autocmd Filetype ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+
+    " AIRLINE
+    let g:airline_left_sep=''
+    let g:airline_right_sep=''
+    let g:airline_theme='dark'
 " }
 
 " autocmd {
