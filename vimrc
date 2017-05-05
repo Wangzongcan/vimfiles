@@ -15,6 +15,7 @@
     Plug 'tpope/vim-rails'
     Plug 'tpope/vim-bundler'
     Plug 'bling/vim-airline'
+    Plug 'kien/ctrlp.vim'
     call plug#end()
 " }
 
@@ -59,7 +60,9 @@
     set hid
     set bs=2
     set aw ar
-    set clipboard+=unnamed
+    if $TMUX == ''
+        set clipboard+=unnamed
+    endif
 " }
 
 " Leader {
